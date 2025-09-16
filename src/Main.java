@@ -1,7 +1,7 @@
 // Arquivo: Main.java
 public class Main {
     public static void main(String[] args) {
-        double[] dadosMatriz = {1,1,2,9,2,4,-3,1,3,6,-5,0};
+        double[] dadosMatriz = {1,2,-1,3,2,4,-2,7,0,1,1,1};
         double[] dadosMatriz2 = {5, 3, 7, 1, 4, 8, 3, 7, 2,3,4,5};
         Matriz matrizOriginal = new Matriz(3, 4, dadosMatriz);
 

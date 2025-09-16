@@ -180,11 +180,13 @@ public class LinearAlgebra {
                     System.out.println("Sistema possível e indeterminado");
                 }
             }
+            return new Matriz(linhas, colunas, array);
+
         }
         else{
             System.out.println("Sistema impossível");
         }
-        return new Matriz(linhas, colunas, array);
+        return null;
     };
     public static Matriz sum(Matriz a, Matriz b) {
         int linhas = a.rows;
