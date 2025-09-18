@@ -156,7 +156,5 @@ public class Main {
         System.out.println("Tentativa de solução:");
         Matriz solucaoImpossivel = LinearAlgebra.Solve(sistemaImpossivel);
         System.out.println();
-
-        System.out.println("=== TODOS OS TESTES CONCLUÍDOS ===");
     }
 }
