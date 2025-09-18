@@ -16,7 +16,7 @@ public class Main {
         Vector vetorTranspose = new Vector(3, elementosVet1);
         System.out.println("Vetor original:");
         System.out.println(vetorTranspose);
-        System.out.println("Vetor transposto (como matriz):");
+        System.out.println("Vetor transposto:");
         Matriz vetorTransposto = LinearAlgebra.transpose(vetorTranspose);
         System.out.print(vetorTransposto);
         System.out.println();
@@ -31,8 +31,8 @@ public class Main {
         System.out.print(gaussiana);
         System.out.println();
 
-        System.out.println("4. TESTE DE RESOLUÇÃO DE SISTEMA LINEAR:");
-        double[] elementosSistema = {2, -1, 1, 5, 1, 3, -2, 8, -1, 2, 1, 3};
+        System.out.println("4.1 TESTE DE RESOLUÇÃO DE SISTEMA LINEAR:");
+        double[] elementosSistema = {1,1,2,9,2,4,-3,1,3,6,-5,0};
         Matriz matrizSistema = new Matriz(3, 4, elementosSistema);
         System.out.println("Sistema linear (matriz ampliada):");
         System.out.print(matrizSistema);
@@ -41,6 +41,15 @@ public class Main {
         if (solucao != null) {
             System.out.print(solucao);
         }
+        System.out.println();
+
+        System.out.println("4.2 SISTEMA IMPOSSÍVEL:");
+        double[] elementosImpossivel = {1, 2, 3, 2, 4, 6, 3, 6, 10};
+        Matriz sistemaImpossivel = new Matriz(3, 3, elementosImpossivel);
+        System.out.println("Sistema impossível:");
+        System.out.print(sistemaImpossivel);
+        System.out.println("Tentativa de solução:");
+        Matriz solucaoImpossivel = LinearAlgebra.Solve(sistemaImpossivel);
         System.out.println();
 
         System.out.println("5. TESTE DE SOMA DE MATRIZES:");
@@ -82,7 +91,6 @@ public class Main {
         System.out.print(multEscalarMat);
         System.out.println();
 
-        // 8. TESTE DE MULTIPLICAÇÃO POR ESCALAR - VETOR
         System.out.println("8. TESTE DE MULTIPLICAÇÃO POR ESCALAR - VETOR:");
         double[] elementosEscalarVet = {2, 4, 6};
         Vector vetorEscalar = new Vector(3, elementosEscalarVet);
@@ -94,7 +102,7 @@ public class Main {
         System.out.println(multEscalarVet);
         System.out.println();
 
-        System.out.println("9. TESTE DE MULTIPLICAÇÃO ELEMENTO A ELEMENTO - MATRIZ:");
+        System.out.println("9. TESTE DE MULTIPLICAÇÃO - MATRIZ:");
         double[] elementosMult1 = {1, 2, 3, 4};
         double[] elementosMult2 = {2, 3, 4, 5};
         Matriz matrizMult1 = new Matriz(2, 2, elementosMult1);
@@ -103,12 +111,12 @@ public class Main {
         System.out.print(matrizMult1);
         System.out.println("Segunda matriz:");
         System.out.print(matrizMult2);
-        System.out.println("Multiplicação elemento a elemento:");
+        System.out.println("Multiplicação:");
         Matriz multElemento = LinearAlgebra.times(matrizMult1, matrizMult2);
         System.out.print(multElemento);
         System.out.println();
 
-        System.out.println("10. TESTE DE MULTIPLICAÇÃO ELEMENTO A ELEMENTO - VETOR:");
+        System.out.println("10. TESTE DE MULTIPLICAÇÃO - VETOR:");
         double[] elementosVetMult1 = {1, 2, 3};
         double[] elementosVetMult2 = {2, 3, 4};
         Vector vetorMult1 = new Vector(3, elementosVetMult1);
@@ -117,32 +125,24 @@ public class Main {
         System.out.println(vetorMult1);
         System.out.println("Segundo vetor:");
         System.out.println(vetorMult2);
-        System.out.println("Multiplicação elemento a elemento:");
+        System.out.println("Multiplicação");
         Vector multVetElemento = LinearAlgebra.times(vetorMult1, vetorMult2);
         System.out.println(multVetElemento);
         System.out.println();
 
-        System.out.println("11. TESTE DE MULTIPLICAÇÃO DE MATRIZES (DOT PRODUCT):");
+        System.out.println("11. TESTE DE MULTIPLICAÇÃO DE MATRIZES:");
         double[] elementosDot1 = {1, 2, 3, 4, 5, 6};
         double[] elementosDot2 = {7, 8, 9, 10, 11, 12};
         Matriz matrizDot1 = new Matriz(2, 3, elementosDot1);
         Matriz matrizDot2 = new Matriz(3, 2, elementosDot2);
-        System.out.println("Primeira matriz (2x3):");
+        System.out.println("Primeira matriz:");
         System.out.print(matrizDot1);
-        System.out.println("Segunda matriz (3x2):");
+        System.out.println("Segunda matriz");
         System.out.print(matrizDot2);
-        System.out.println("Produto matricial (dot product):");
+        System.out.println("Produto matricial:");
         Matriz produtoMatricial = LinearAlgebra.dot(matrizDot1, matrizDot2);
         System.out.print(produtoMatricial);
         System.out.println();
 
-        System.out.println("12. TESTE ADICIONAL - SISTEMA IMPOSSÍVEL:");
-        double[] elementosImpossivel = {1, 2, 3, 2, 4, 6, 3, 6, 10};
-        Matriz sistemaImpossivel = new Matriz(3, 3, elementosImpossivel);
-        System.out.println("Sistema impossível:");
-        System.out.print(sistemaImpossivel);
-        System.out.println("Tentativa de solução:");
-        Matriz solucaoImpossivel = LinearAlgebra.Solve(sistemaImpossivel);
-        System.out.println();
     }
 }
