@@ -1,8 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("=== TESTES DA BIBLIOTECA DE ÁLGEBRA LINEAR ===\n");
 
-        // 1. TESTE DE TRANSPOSIÇÃO
         System.out.println("1. TESTE DE TRANSPOSIÇÃO:");
         double[] elementos1 = {1, 2, 3, 4, 5, 6};
         Matriz matrizTranspose = new Matriz(2, 3, elementos1);
@@ -13,7 +11,6 @@ public class Main {
         System.out.print(transposta);
         System.out.println();
 
-        // 2. TESTE DE TRANSPOSIÇÃO DE VETOR
         System.out.println("2. TESTE DE TRANSPOSIÇÃO DE VETOR:");
         double[] elementosVet1 = {1, 2, 3};
         Vector vetorTranspose = new Vector(3, elementosVet1);
@@ -24,7 +21,6 @@ public class Main {
         System.out.print(vetorTransposto);
         System.out.println();
 
-        // 3. TESTE DE ELIMINAÇÃO GAUSSIANA
         System.out.println("3. TESTE DE ELIMINAÇÃO GAUSSIANA:");
         double[] elementosGauss = {2, -1, 3, 1, 3, -2, 1, -1, 1};
         Matriz matrizGauss = new Matriz(3, 3, elementosGauss);
@@ -35,7 +31,6 @@ public class Main {
         System.out.print(gaussiana);
         System.out.println();
 
-        // 4. TESTE DE RESOLUÇÃO DE SISTEMA LINEAR
         System.out.println("4. TESTE DE RESOLUÇÃO DE SISTEMA LINEAR:");
         double[] elementosSistema = {2, -1, 1, 5, 1, 3, -2, 8, -1, 2, 1, 3};
         Matriz matrizSistema = new Matriz(3, 4, elementosSistema);
@@ -48,7 +43,6 @@ public class Main {
         }
         System.out.println();
 
-        // 5. TESTE DE SOMA DE MATRIZES
         System.out.println("5. TESTE DE SOMA DE MATRIZES:");
         double[] elementosSoma1 = {1, 2, 3, 4};
         double[] elementosSoma2 = {5, 6, 7, 8};
@@ -63,7 +57,6 @@ public class Main {
         System.out.print(somaMat);
         System.out.println();
 
-        // 6. TESTE DE SOMA DE VETORES
         System.out.println("6. TESTE DE SOMA DE VETORES:");
         double[] elementosVetSoma1 = {1, 2, 3};
         double[] elementosVetSoma2 = {4, 5, 6};
@@ -78,7 +71,6 @@ public class Main {
         System.out.println(somaVet);
         System.out.println();
 
-        // 7. TESTE DE MULTIPLICAÇÃO POR ESCALAR - MATRIZ
         System.out.println("7. TESTE DE MULTIPLICAÇÃO POR ESCALAR - MATRIZ:");
         double[] elementosEscalarMat = {1, 2, 3, 4, 5, 6};
         Matriz matrizEscalar = new Matriz(2, 3, elementosEscalarMat);
@@ -102,7 +94,6 @@ public class Main {
         System.out.println(multEscalarVet);
         System.out.println();
 
-        // 9. TESTE DE MULTIPLICAÇÃO ELEMENTO A ELEMENTO - MATRIZ
         System.out.println("9. TESTE DE MULTIPLICAÇÃO ELEMENTO A ELEMENTO - MATRIZ:");
         double[] elementosMult1 = {1, 2, 3, 4};
         double[] elementosMult2 = {2, 3, 4, 5};
@@ -117,7 +108,6 @@ public class Main {
         System.out.print(multElemento);
         System.out.println();
 
-        // 10. TESTE DE MULTIPLICAÇÃO ELEMENTO A ELEMENTO - VETOR
         System.out.println("10. TESTE DE MULTIPLICAÇÃO ELEMENTO A ELEMENTO - VETOR:");
         double[] elementosVetMult1 = {1, 2, 3};
         double[] elementosVetMult2 = {2, 3, 4};
@@ -132,7 +122,6 @@ public class Main {
         System.out.println(multVetElemento);
         System.out.println();
 
-        // 11. TESTE DE MULTIPLICAÇÃO DE MATRIZES (DOT PRODUCT)
         System.out.println("11. TESTE DE MULTIPLICAÇÃO DE MATRIZES (DOT PRODUCT):");
         double[] elementosDot1 = {1, 2, 3, 4, 5, 6};
         double[] elementosDot2 = {7, 8, 9, 10, 11, 12};
@@ -147,9 +136,8 @@ public class Main {
         System.out.print(produtoMatricial);
         System.out.println();
 
-        // 12. TESTE ADICIONAL - SISTEMA IMPOSSÍVEL
         System.out.println("12. TESTE ADICIONAL - SISTEMA IMPOSSÍVEL:");
-        double[] elementosImpossivel = {1, 2, 3, 2, 4, 7, 3, 6, 9};
+        double[] elementosImpossivel = {1, 2, 3, 2, 4, 6, 3, 6, 10};
         Matriz sistemaImpossivel = new Matriz(3, 3, elementosImpossivel);
         System.out.println("Sistema impossível:");
         System.out.print(sistemaImpossivel);
