@@ -32,7 +32,7 @@ public class Main {
         System.out.println();
 
         System.out.println("4.1 TESTE DE RESOLUÇÃO DE SISTEMA LINEAR:");
-        double[] elementosSistema = {1,1,2,9,2,4,-3,1,3,6,-5,0};
+        double[] elementosSistema = {3,-1,2,7,5,7,-3,10,4,-6,7,13};
         Matriz matrizSistema = new Matriz(3, 4, elementosSistema);
         System.out.println("Sistema linear (matriz ampliada):");
         System.out.print(matrizSistema);
