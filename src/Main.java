@@ -144,5 +144,26 @@ public class Main {
         System.out.print(produtoMatricial);
         System.out.println();
 
+
+
+        // Cenário 3
+
+        double[] adjacencyData = {
+                0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
+                0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 1, 1, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+                0, 1, 1, 1, 1, 0, 0, 1, 0, 1,
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+                0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 1, 0, 0, 0, 0
+        };
+
+        Matriz A = new Matriz(10, 10, adjacencyData);
+        double tol = 0.0001;
+        HITS.authority(A, tol);
+
     }
 }
